@@ -6,8 +6,12 @@
         <link rel="stylesheet" href="style.css">
         
     </head>
-    <body>
-        <h1>数独</h1>
+    <body id="bd">
+        <div id="top-area">
+            <h1>数独</h1>
+            <h3 id="timer">時間</h3>
+        </div>
+        
         <div id="game"></div><!-- ゲームの盤面挿入-->
 
         
@@ -22,7 +26,6 @@
             <button class="di" data-diff="easy">簡単</button>
             <button class="di" data-diff="normal">普通</button>
             <button class="di" data-diff="hard">難しい</button>
-            <button class="di" data-diff="extreme">超ヤバイ</button>
         </div>
 
         <!--数値入力用パネル-->

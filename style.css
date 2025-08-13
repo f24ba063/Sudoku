@@ -8,6 +8,14 @@
     
 }
 
+#top-area {
+    display: flex;
+}
+
+#timer{
+    padding-left: 300px;
+}
+
 /* 9x9のマスひとつひとつに付与されるクラス */
 .cube {
     width: 60px;
@@ -35,13 +43,6 @@
 }
 
 /* 入力用のパネル母体 */
-/* #number-panel{
-    background-color: rgba(152, 161, 203, 0.504);
-    width:210px;
-    display:grid;
-    grid-template-columns: repeat(3, auto);
-} */
-
 #number-panel {
     opacity: 0;
     background-color: rgba(152, 161, 203, 0.504);
