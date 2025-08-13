@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>数独盤面</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <h1>数独</h1>
+        <div id="game"></div><!-- ゲームの盤面挿入-->
+
+        
+        <!--ヒントボタン-->
+        <div id="controls">
+            <button id="toggle-hint">ヒント: Off</button>
+            <button id="give-up">ギブアップ！答え教えて！</button>
+        </div>
+        
+        <!--難易度設定ボタン-->
+        <div id="diff">
+            <button class="di" data-diff="easy">簡単</button>
+            <button class="di" data-diff="normal">普通</button>
+            <button class="di" data-diff="hard">難しい</button>
+            <button class="di" data-diff="extreme">超ヤバイ</button>
+        </div>
+
+        <!--数値入力用パネル-->
+        <div id="number-panel" class="hidden">
+
+        </div>
+        <div id="overlay">🎉 パズルクリア！ 🎉</div>
+        <script type="module" src="script.js" defer></script>
+
+    </body>
+</html>

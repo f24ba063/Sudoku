@@ -1,0 +1,101 @@
+/* ゲームフィールド全体のクラス */
+#game {
+    display:grid;
+    grid-template-columns:repeat(9, 1fr) ;
+    grid-template-rows: repeat(9,1fr);
+    width: 540px;
+    height: 540px;
+    
+}
+
+/* 9x9のマスひとつひとつに付与されるクラス */
+.cube {
+    width: 60px;
+    height: 60px;
+    border : 1px solid black;
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-size: 35px;
+    text-align:center;
+}
+
+/* マウスオーバー時に色が変わってポインターになる */
+.cube:hover {
+    background-color:rgba(255, 192, 203, 0.452);
+    cursor:pointer;
+}
+
+/* マスをクリックした時の演出 */
+.selected {
+    background-color : rgba(255, 255, 0, 0.181);
+}
+.besides-selected {
+    background-color: rgba(32, 214, 255, 0.218);
+}
+
+/* 入力用のパネル母体 */
+/* #number-panel{
+    background-color: rgba(152, 161, 203, 0.504);
+    width:210px;
+    display:grid;
+    grid-template-columns: repeat(3, auto);
+} */
+
+#number-panel {
+    opacity: 0;
+    background-color: rgba(152, 161, 203, 0.504);
+    width:210px;
+    display:grid;
+    grid-template-columns: repeat(3, auto);
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+#number-panel.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* パネルの数字ボタン */
+#number-panel button {
+
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.hidden {
+    opacity:0.50;
+}
+
+/* 数値入力不可能（抜かれていない）マス */
+.statics {
+    background-color: rgba(172, 172, 172, 0.345);
+}
+
+/* ヒントボタン */
+#toggle-hint {
+    padding: 10px;
+    margin: 20px;
+    margin-right: 220px;
+}
+
+/* 降参ボタン */
+#give-up {
+    padding: 10px;
+    margin-right: 20px;
+}
+
+/* ヒント機能発動中、間違ったマスを押した時のマスの色塗り */
+.failure{
+    background-color: yellow !important;
+}
+
+/* 難易度設定ボタン */
+.di{
+    padding : 10px 20px;
+    margin : 5px 10px;
+}
