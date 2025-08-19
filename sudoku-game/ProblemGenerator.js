@@ -8,10 +8,9 @@ export class ProblemGenerator{
         
         let eraseCount;
         switch(difficulty){
-            case "easy" :   eraseCount = 5;break;
+            case "easy" :   eraseCount = 35;break;
             case "normal" : eraseCount = 45;break;
             case "hard" :   eraseCount = 55;break;
-            case "extreme" :   eraseCount = 65;break;
         }
 
         problemBoard = this.removeNumbers(problemBoard, eraseCount);
