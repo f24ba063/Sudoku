@@ -47,7 +47,7 @@ app.get('/logout', (req,res) => {
     });
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`サーバー起動しています：http://localhost:${port}`)
 });
 
